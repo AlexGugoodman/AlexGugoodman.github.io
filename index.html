@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>小顾的第一个test</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	
+</head>
+
+<body>
+	<h1>送给我的葛文绚可爱xiubo！！！</h1>
+	<h2>xiubo天下最可爱</h2>
+	<img src="xiubo美照1.jpg" alt="xiubo美照">
+	<a href = "http://www.baidu.com">·试试点开这个网站！</a>
+	<p>今天是xiubo和哥哥在一起第<span id='daysCount' class="daysCountStyle">天数</span>天！</p>
+		<script>
+		const startDate = new Date('2022-10-02');//起始日期
+		const today = new Date();
+		const difference = today - startDate;
+		const days = Math.floor(difference/(1000*60*60*24)); // 将毫秒数差异转换成天数
+		document.getElementById('daysCount').textContent = days; // 更新页面上的天数显示
+		</script>
+	
+	<!--unorded list是无序标签，li是列表项，无序列表用于展示不需要排序的项目，项目前通常有一个圆点作为标记 -->
+	<ul> 
+		<li>xiubo</li>
+		<li>可爱xiubo</li>
+		<li>耶耶耶</li>
+	</ul>
+	<!--ordered list是有序列表，项目前会自动加上数字-->
+	<ol>
+		<li>看看可爱xiubo</li>
+		<li>看看可爱bobo</li>
+	</ol>
+	
+	<table>
+		<tr>
+			<th>可爱xiubo天气好好</th>
+			<th>腿长！</th>
+		</tr>
+		
+		<tr>
+			<th>真棒！</th>
+			<td>白！</td>
+		</tr>
+	</table>
+	
+	<!--添加javascript，设计成点了就会亮 -->
+	<button id = "showbutton">xiubobo快点我快点我！！</button>
+	<img id ='imagetoshow' src='xiubo美照.jpg' style='display:none;'>
+	<script>
+		document.getElementById('showbutton').onclick=function(){
+			document.getElementById('imagetoshow').style.display = 'block';
+			};
+	</script>
+</body>
+
+</html>
