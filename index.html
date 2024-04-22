@@ -8,82 +8,103 @@
 </head>
 
 <body>
-	<button onclick="playaudio()">点我点我</button>
-	<audio id="bgm" style="display:none;">
-			<source src="给你一瓶魔法药水.mp3" type="audio/mp3">
+	<div class="center-container">
+		<button id="startButton" onclick="startProcess()">点我点我</button>
+		<div id="countdown" style="display:none;"></div>
+	</div>
+	<audio id="bgm" style="display:none;" loop>
+		<source src="给你一瓶魔法药水.mp3" type="audio/mp3">
 	</audio>
 		<script>
-			function playaudio(){
-			var bgm= document.getElementById('bgm');
-			bgm.play()}
+			function startProcess(){
+				var bgm= document.getElementById('bgm');
+				bgm.play();
+				document.getElementById('countdown').style.display='block';
+				document.getElementById('startButton').style.display='none';
+				var seconds=15;
+				var interval = setInterval(function(){
+					document.getElementById('countdown').innerHTML =  seconds ;
+					seconds--;
+					if(seconds<0){
+						clearInterval(interval);
+						document.getElementById('countdown').style.display='none';
+						showContent();
+						}
+				},1000);
+			}
+			
+			function showContent(){
+				document.getElementById('mainContent').style.display='block';
+			}
 		</script>
+			
+	<div id="mainContent" style="display:none;">
+		<h1 style="font-size:100px">献给天下最可爱的宝贝</h1>
+		
+		<h2 class="head2">xiubo天下最可爱!</h2>
+		
+		<img src="xiubo美照1.jpg" alt="xiubo美照" style="margin-top:80px;width:800px;height:auto">
+		<!--<a href = "http://www.baidu.com">·试试点开这个网站！</a> -->
+		
+		<div style="display:flex; align-items: center; margin-top:80px;">
+			<p><span id='daysStart' style="font-size:100px;font-weight:bold">天数</span>天之前，他在经济伦理课上添加了这个小可爱→<br>她从一开始就展现出了对美食的热爱</p>
+				<script>
+				const startDate = new Date('2022-09-08');//起始日期
+				const today = new Date();
+				const difference = today - startDate;
+				const days = Math.floor(difference/(1000*60*60*24)); // 将毫秒数差异转换成天数
+				document.getElementById('daysStart').textContent = days; // 更新页面上的天数显示
+				</script>
+			<img src="第一句话.jpg" style="vertical-align:middle; margin-left:200px;">
+		</div>
+		
+		<div style="display:flex; align-items: center; margin-top:80px;">
+			<p>仅仅<span style="font-size:100px">1</span>天之后，沈导和他的学生们前往The Press，他们再次相遇了，也许这就是上天的安排吧</p>
+			<img src="thepress.jpg" style="vertical-align:middle; margin-left:100px;">
+		</div>
 
-	<h1 style="font-size:100px">献给天下最可爱的宝贝</h1>
-	
-	<h2 class="head2">xiubo天下最可爱!</h2>
-	
-	<img src="xiubo美照1.jpg" alt="xiubo美照" style="margin-top:80px;width:800px;height:auto">
-	<!--<a href = "http://www.baidu.com">·试试点开这个网站！</a> -->
-	
-	<div style="display:flex; align-items: center; margin-top:80px;">
-		<p><span id='daysStart' style="font-size:100px;font-weight:bold">天数</span>天之前，他在经济伦理课上添加了这个小可爱→<br>她从一开始就展现出了对美食的热爱</p>
+		<h3 class="head2" style="margin-top: 80px;">2022年9月11日，他们参加了金融一班的鸡尾酒晚会<br>深夜光草的风掠过，他在心中默默记下：她喜欢周杰伦</h3>
+		<div class="image-container">
+			<img src="220911鸡尾酒.jpg"  alt="鸡尾酒">
+			<img src="220911光草.jpg"  alt="光草">
+		</div>
+
+		<h3 class="head2" style="margin-top: 80px;">可观测宇宙至少含有一千万亿亿个恒星，宇宙无垠<br>10月2日<br>在银河系第三旋臂边缘的一颗蓝色星球上<br>两人有了只属于他们的答案</h3>
+		<div class="image-container">
+			<img src="221002宇宙.jpg">
+			<img src="221002在一起.jpg">
+		</div>
+
+		<p>这个答案，他们已经书写了<span id='daysCount' class="daysCountStyle"></span>天
 			<script>
-			const startDate = new Date('2022-09-08');//起始日期
-			const today = new Date();
-			const difference = today - startDate;
-			const days = Math.floor(difference/(1000*60*60*24)); // 将毫秒数差异转换成天数
-			document.getElementById('daysStart').textContent = days; // 更新页面上的天数显示
+			const startDaten = new Date('2022-10-02');//起始日期
+			const todayn = new Date();
+			const differencen = todayn - startDaten;
+			const daysn = Math.floor(differencen/(1000*60*60*24)); // 将毫秒数差异转换成天数
+			document.getElementById('daysCount').textContent = daysn; // 更新页面上的天数显示
 			</script>
-		<img src="第一句话.jpg" style="vertical-align:middle; margin-left:200px;">
-	</div>
-	
-	<div style="display:flex; align-items: center; margin-top:80px;">
-		<p>仅仅<span style="font-size:100px">1</span>天之后，沈导和他的学生们前往The Press，他们再次相遇了，也许这就是上天的安排吧</p>
-		<img src="thepress.jpg" style="vertical-align:middle; margin-left:100px;">
-	</div>
+		</p>
+		
+		<p>正如她的母校操场标语”将论文写在祖国大地上“<br>为了寻找答案后的附加分，他们走过了有文化气息的绍兴、豪车遍地的宁ba、和上海很像的武汉、ganla很便宜的青岛、被晒黑了的三亚……<br>人生无止境，而他们的故事，也同样远不止此</p>
+		<div class="image-container">
+			<img src="两人1.jpg">
+			<img src="两人2.jpg">
+			<img src="两人3.jpg">
+			<img src="两人4.jpg">
+			<img src="两人5.jpg">
+		</div>
 
-	<h3 class="head2" style="margin-top: 80px;">2022年9月11日，他们参加了金融一班的鸡尾酒晚会<br>深夜光草的风掠过，他在心中默默记下：她喜欢周杰伦</h3>
-	<div class="image-container">
-		<img src="220911鸡尾酒.jpg"  alt="鸡尾酒">
-		<img src="220911光草.jpg"  alt="光草">
-	</div>
+		<h3 class='head2'>想和她一起走下去<br>葛小姐，我的魔法只对你偏心</h3>
 
-	<h3 class="head2" style="margin-top: 80px;">可观测宇宙至少含有一千万亿亿个恒星，宇宙无垠<br>10月2日<br>在银河系第三旋臂边缘的一颗蓝色星球上<br>两人有了只属于他们的答案</h3>
-	<div class="image-container">
-		<img src="221002宇宙.jpg">
-		<img src="221002在一起.jpg">
-	</div>
-
-	<p>这个答案，他们已经书写了<span id='daysCount' class="daysCountStyle"></span>天
+		<!--添加javascript，设计成点了就会亮 -->
+		<button id = "showbutton">xiubobo快点我快点我！！</button>
+		<img id ='imagetoshow' src='xiubo美照.jpg' style='display:none;'>
 		<script>
-		const startDaten = new Date('2022-10-02');//起始日期
-		const todayn = new Date();
-		const differencen = todayn - startDaten;
-		const daysn = Math.floor(differencen/(1000*60*60*24)); // 将毫秒数差异转换成天数
-		document.getElementById('daysCount').textContent = daysn; // 更新页面上的天数显示
+			document.getElementById('showbutton').onclick=function(){
+				document.getElementById('imagetoshow').style.display = 'block';
+				};
 		</script>
-	</p>
-	
-	<p>正如她的母校操场标语”将论文写在祖国大地上“<br>为了寻找答案后的附加分，他们走过了有文化气息的绍兴、豪车遍地的宁ba、和上海很像的武汉、ganla很便宜的青岛、被晒黑了的三亚……<br>人生无止境，而他们的故事，远不止此</p>
-	<div class="image-container">
-		<img src="两人1.jpg">
-		<img src="两人2.jpg">
-		<img src="两人3.jpg">
-		<img src="两人4.jpg">
-		<img src="两人5.jpg">
 	</div>
-
-
-
-
-	<!--添加javascript，设计成点了就会亮 -->
-	<button id = "showbutton">xiubobo快点我快点我！！</button>
-	<img id ='imagetoshow' src='xiubo美照.jpg' style='display:none;'>
-	<script>
-		document.getElementById('showbutton').onclick=function(){
-			document.getElementById('imagetoshow').style.display = 'block';
-			};
-	</script>
 </body>
 
 </html>
