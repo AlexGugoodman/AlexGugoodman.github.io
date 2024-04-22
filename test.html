@@ -1,17 +1,32 @@
-123<!DOCTYPE html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>JavaScript 示例</title>
+    <meta charset="UTF-8">
+    <title>Simple Dynamic Presentation</title>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <h1>我的网页</h1>
-    <button id="clickMe">点击我</button>
+    <button id="startButton">开始演示</button>
+    <div id="chapter1" class="hidden">
+        第一章内容...
+        <button id="nextChapterButton">下一章</button>
+    </div>
+    <div id="chapter2" class="hidden">第二章内容...</div>
 
     <script>
-        var button = document.getElementById('clickMe');  // 获取按钮
-        button.onclick = function() {
-            console.log('按钮被点击了！');
-        };
+        document.getElementById("startButton").addEventListener("click", function() {
+            document.getElementById("chapter1").style.display = "block"; // 显示第一章
+            this.style.display = "none"; // 隐藏开始按钮
+        });
+
+        document.getElementById("nextChapterButton").addEventListener("click", function() {
+            document.getElementById("chapter2").style.display = "block"; // 显示第二章
+            this.style.display = "none"; // 隐藏下一章按钮
+        });
     </script>
 </body>
 </html>

@@ -7,10 +7,6 @@ body {
     padding: 20px; /* 页面内边距 */
 }
 
-.daysCountStyle{
-	font-size:30px;
-	font-weight:bold;
-}
 
 
 /* 标题样式 */
@@ -21,9 +17,17 @@ h1 {
 }
 
 h2 {
-    color: #00695c; /* 深绿色 */
+    font-size:30px;
+	color: #00695c; /* 深绿色 */
 	text-align:center;
     margin-bottom: 20px; /* 底部间距 */
+}
+
+/* 段落样式 */
+p {
+    font-size: 50px; /* 字体大小 */
+    margin-bottom: 10px; /* 底部间距 */
+	text-align:center;
 }
 
 /* 链接样式 */
@@ -43,34 +47,14 @@ img {
     height: auto; /* 高度自动 */
 }
 
-/* 段落样式 */
-p {
-    font-size: 20px; /* 字体大小 */
-    margin-bottom: 10px; /* 底部间距 */
-	text-align:center;
+
+.daysCountStyle{
+	font-size:30px;
+	font-weight:bold;
 }
 
-/* 无序列表样式 */
-ul {
-    padding-left: 20px; /* 列表内缩进 */
-}
-
-/* 有序列表样式 */
-ol {
-    padding-left: 20px; /* 列表内缩进 */
-}
-
-/* 表格样式 */
-table {
-    width: 100%; /* 表格宽度 */
-    margin-top: 20px; /* 表格顶部间距 */
-    border-collapse: collapse; /* 边框合并 */
-}
-th, td {
-    border: 1px solid #ccc; /* 单元格边框 */
-    padding: 8px; /* 单元格内边距 */
-    text-align: left; /* 文字左对齐 */
-}
-th {
-    background-color: #e1bee7; /* 淡紫色背景 */
+.daysStartStyle{
+	font-size: 50px;
+	font-weight: bold;
+	text-align: center;
 }

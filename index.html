@@ -8,18 +8,61 @@
 </head>
 
 <body>
-	<h1>送给我的葛文绚可爱xiubo！！！</h1>
-	<h2>xiubo天下最可爱</h2>
-	<img src="xiubo美照1.jpg" alt="xiubo美照">
-	<a href = "http://www.baidu.com">·试试点开这个网站！</a>
-	<p>今天是xiubo和哥哥在一起第<span id='daysCount' class="daysCountStyle">天数</span>天！</p>
+	<button onclick="playaudio()">点我点我</button>
+	<audio id="bgm" style="display:none;">
+			<source src="给你一瓶魔法药水.mp3" type="audio/mp3">
+	</audio>
+		<script>
+			function playaudio(){
+			var bgm= document.getElementById('bgm');
+			bgm.play()}
+		</script>
+
+	<h1 style="font-size:100px">献给天下最可爱的宝贝</h1>
+	
+	<h2>xiubo天下最可爱!</h2>
+	
+	<img src="xiubo美照1.jpg" alt="xiubo美照" style="margin-top:80px;width:800px;height:auto">
+	<!--<a href = "http://www.baidu.com">·试试点开这个网站！</a> -->
+	
+	<div style="display:flex; align-items: center; margin-top:80px;">
+		<span>
+			<span id='daysStart' style="font-size:100px;font-weight:bold">天数</span>
+			<span style="font-size:30px">天之前，他在经济伦理课上添加了这个小可爱→<br>她从一开始就展现出了对美食的热爱</span>
+			<script>
+			const startDate = new Date('2022-09-08');//起始日期
+			const today = new Date();
+			const difference = today - startDate;
+			const days = Math.floor(difference/(1000*60*60*24)); // 将毫秒数差异转换成天数
+			document.getElementById('daysStart').textContent = days; // 更新页面上的天数显示
+			</script>
+		</span>
+		<img src="第一句话.jpg" style="vertical-align:middle; margin-left:200px;">
+	</div>
+	
+	<div style="display:flex; align-items: center; margin-top:80px;">
+		<span>
+			<span style="font-size:30px">仅仅</span>
+			<span style="font-size:100px">1</span>
+			<span style="font-size:30px">天之后，沈导和他的学生们前往The Press，在那个地方，他们再次相遇了，也许这就是上天的安排吧（沈导上大分！）</span>
+		</span> 
+		<img src="thepress.jpg" style="vertical-align:middle; margin-left:100px;">
+	</div>
+
+
+
+
+
+	<p>今天是xiubo和哥哥在一起第<span id='daysCount' class="daysCountStyle">123</span>天！</p>
 		<script>
 		const startDate = new Date('2022-10-02');//起始日期
-		const today = new Date();
-		const difference = today - startDate;
-		const days = Math.floor(difference/(1000*60*60*24)); // 将毫秒数差异转换成天数
-		document.getElementById('daysCount').textContent = days; // 更新页面上的天数显示
+		const todayn = new Date();
+		const differencen = todayn - startDaten;
+		const daysn = Math.floor(differencen/(1000*60*60*24)); // 将毫秒数差异转换成天数
+		document.getElementById('daysCount').textContent = daysn; // 更新页面上的天数显示
 		</script>
+	
+
 	
 	<!--unorded list是无序标签，li是列表项，无序列表用于展示不需要排序的项目，项目前通常有一个圆点作为标记 -->
 	<ul> 
