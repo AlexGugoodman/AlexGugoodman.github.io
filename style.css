@@ -64,6 +64,7 @@ img {
 	align-items: center;  /* 图片垂直居中对齐 */
 	width:1500px;
 	height:600px;
+	overflow:auto;
 }
 .image-container img:first-child {
 	flex:1;
